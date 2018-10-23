@@ -1,6 +1,6 @@
 # iOS ListenToNBA APP
 
-* ListenToNBA有观看直播并支持后台播放收听NBA功能
+> 观看NBA直播并支持后台收听功能的APP
 
 #结构
 *******
@@ -12,16 +12,35 @@
 
 
 
+#展示图
+*******
+
+![image](https://luodecoding.github.io/images/ListenToNBA/ListenNBADemo1.png)
+![image](https://luodecoding.github.io/images/ListenToNBA/ListenNBADemo2.png)
+![image](https://luodecoding.github.io/images/ListenToNBA/ListenNBADemo3.png)
+
+#目录
+*******
+
+>基础页面布局
+
+#####内容
 
 
-<!-->第一部分
 
-<h4>基础页面布局（包含首页的Banner和列表展示以及webview相关内容）；</h4>
+>基础数据
 
->第二部分
+#####内容
 
-<h4>数据方面（采用第三方SDK：LeanCloud，在平台端建表录入数据，APP端获取即可）；</h4>
 
->第三部分
 
-<h4>直播控件开发（围绕AVPlayer展开）</h4>-->
+>直播控件开发
+
+#####内容
+
+
+
+#作者
+*******
+
+####luodeCoding, [我的博客](luodeCoding.github.io)
