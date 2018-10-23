@@ -9,7 +9,45 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "NSString+Util.h"
+#import "UIButton+Util.h"
+#import "UIImage+Util.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Extension.h"
+#import "NSDate+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "CommonUtil.h"
+#import "MBProgressHUD+MBProgressHUD_Util.h"
+
+
+#import <UIImageView+WebCache.h>
+#import <MBProgressHUD.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+#import <AVQuery.h>
 
 #endif /* PrefixHeader_pch */
+
+#define weakSelf(weakSelf) __weak typeof(self) weakSelf = self;
+#define hexColor(hex,a) [UIColor colorWithHex:hex alpha:a]
+
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+#define SCREEN_SIZE [UIScreen mainScreen].bounds.size
+#define SCALE_WIDTH(w) (((w)/375.0f) * SCREEN_SIZE.width) //以750x1334做的UI界面
+#define SCALE_HEIGH(h) (((h)/667.0f) * (SCREEN_SIZE.height - 64))
+
+#define kTintColor hexColor(0x23568e,1)
+
+#define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a*1.0]
+
+//上拉下拉的title
+#define HeadTitleWithStateIdle              @"🏀刷新完毕🏀"
+#define HeadTitleWithStatePulling           @"🏀松手开始刷新🏀"
+#define HeadTitleWithStateRefreshing        @"🏀🏀🏀"
+#define FooterTitleWithStatePulling         @"松手开始加载..."
+#define FooterTitleWithStateRefreshing      @"正在努力加载..."
+#define FooterTitleWithStateIdle            @"暂时就这么多了，待会再刷新看看"
+

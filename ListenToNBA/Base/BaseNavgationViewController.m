@@ -22,7 +22,7 @@
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
         NSDictionary *attributeDic = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:18.0],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];
         self.navigationBar.titleTextAttributes = attributeDic;
-        self.navigationBar.translucent = YES;
+        self.navigationBar.translucent = NO;
         self.navigationBar.backgroundColor = kTintColor;
         [self.navigationBar setBackgroundImage:[UIImage imageWithColor:kTintColor] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
         [self.navigationBar setShadowImage:[UIImage new]];
@@ -145,22 +145,22 @@
 }
 
 
-// 是否支持自动转屏
-- (BOOL)shouldAutorotate
-{
-    return [self.visibleViewController shouldAutorotate];
-}
-// 支持哪些屏幕方向
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return [self.visibleViewController supportedInterfaceOrientations];
-}
-
-// 默认的屏幕方向（当前ViewController必须是通过模态出来的UIViewController（模态带导航的无效）方式展现出来的，才会调用这个方法）
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-    return [self.visibleViewController preferredInterfaceOrientationForPresentation];
-}
+//// 是否支持自动转屏
+//- (BOOL)shouldAutorotate
+//{
+//    return [self.visibleViewController shouldAutorotate];
+//}
+//// 支持哪些屏幕方向
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+//{
+//    return [self.visibleViewController supportedInterfaceOrientations];
+//}
+//
+//// 默认的屏幕方向（当前ViewController必须是通过模态出来的UIViewController（模态带导航的无效）方式展现出来的，才会调用这个方法）
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+//{
+//    return [self.visibleViewController preferredInterfaceOrientationForPresentation];
+//}
 
 
 

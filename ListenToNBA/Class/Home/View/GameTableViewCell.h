@@ -10,4 +10,5 @@
 
 @interface GameTableViewCell : UITableViewCell
 
+- (void)initData:(AVObject *)game;
 @end

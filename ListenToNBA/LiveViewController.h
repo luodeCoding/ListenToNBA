@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, PanDirection){
+    panHorizontalMove,
+    panVerticalMove
+};
+
 @interface LiveViewController : UIViewController
 
 @end
