@@ -98,6 +98,33 @@
 
 #pragma mark - Event
 
+- (void)creatLockScreenFaceWithTeamName:(NSString *)teamName commentatorName:(NSString *)commentatorName {
+    
+    Class playingInfoCenter = NSClassFromString(@"MPNowPlayingInfoCenter");
+    //获取正在收听直播信息
+    if (playingInfoCenter) {
+        NSMutableDictionary *songInfo = [[NSMutableDictionary alloc] init];
+        UIImage *image = [UIImage imageNamed:@"nabLogo"];
+        
+        MPMediaItemArtwork *albumArt = [[MPMediaItemArtwork alloc] initWithImage:image];
+        //球队名称
+        [songInfo setObject:teamName forKey:MPMediaItemPropertyTitle];
+        //解说员
+        [songInfo setObject:commentatorName forKey:MPMediaItemPropertyArtist];
+        //专辑名
+        //        [songInfo setObject:@"苏群" forKey:MPMediaItemPropertyAlbumTitle];
+        //专辑缩略图
+        [songInfo setObject:albumArt forKey:MPMediaItemPropertyArtwork];
+        //        [songInfo setObject:[NSNumber numberWithDouble:[audioY getCurrentAudioTime]] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime]; //音乐当前已经播放时间
+        //        [songInfo setObject:[NSNumber numberWithFloat:1.0] forKey:MPNowPlayingInfoPropertyPlaybackRate];//进度光标的速度 （这个随 自己的播放速率调整，我默认是原速播放）
+        //        [songInfo setObject:[NSNumber numberWithDouble:[audioY getAudioDuration]] forKey:MPMediaItemPropertyPlaybackDuration];//歌曲总时间设置
+        
+        //        设置锁屏状态下屏幕显示音乐信息
+        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:songInfo];
+    }
+}
+
+
 #pragma mark - Network
 
 - (void)requestLiveTeamList {
@@ -176,33 +203,6 @@
             break;
         default:
             break;
-    }
-}
-
-- (void)creatLockScreenFaceWithTeamName:(NSString *)teamName commentatorName:(NSString *)commentatorName {
-    
-    Class playingInfoCenter = NSClassFromString(@"MPNowPlayingInfoCenter");
-    //获取正在收听直播信息
-    //    NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
-    if (playingInfoCenter) {
-        NSMutableDictionary *songInfo = [[NSMutableDictionary alloc] init];
-        UIImage *image = [UIImage imageNamed:@"nabLogo"];
-        
-        MPMediaItemArtwork *albumArt = [[MPMediaItemArtwork alloc] initWithImage:image];
-        //球队名称
-        [songInfo setObject:teamName forKey:MPMediaItemPropertyTitle];
-        //解说员
-        [songInfo setObject:commentatorName forKey:MPMediaItemPropertyArtist];
-        //专辑名
-        //        [songInfo setObject:@"苏群" forKey:MPMediaItemPropertyAlbumTitle];
-        //专辑缩略图
-        [songInfo setObject:albumArt forKey:MPMediaItemPropertyArtwork];
-        //        [songInfo setObject:[NSNumber numberWithDouble:[audioY getCurrentAudioTime]] forKey:MPNowPlayingInfoPropertyElapsedPlaybackTime]; //音乐当前已经播放时间
-        //        [songInfo setObject:[NSNumber numberWithFloat:1.0] forKey:MPNowPlayingInfoPropertyPlaybackRate];//进度光标的速度 （这个随 自己的播放速率调整，我默认是原速播放）
-        //        [songInfo setObject:[NSNumber numberWithDouble:[audioY getAudioDuration]] forKey:MPMediaItemPropertyPlaybackDuration];//歌曲总时间设置
-        
-        //        设置锁屏状态下屏幕显示音乐信息
-        [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:songInfo];
     }
 }
 

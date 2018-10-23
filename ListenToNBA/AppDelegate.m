@@ -27,7 +27,6 @@
     [self supportBackGroundPlayAudio];
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     HomeViewController * home = [[HomeViewController alloc]init];
-//    BaseNavgationViewController *nav = [[BaseNavgationViewController alloc]initWithRootViewController:home];
     self.window.rootViewController = home;
     [self.window makeKeyAndVisible];
     return YES;

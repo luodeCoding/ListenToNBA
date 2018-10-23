@@ -126,7 +126,6 @@
     [self.view addSubview:_activity];
     [_activity startAnimating];
     
-    
     //视图隐藏
     [self hideView];
     

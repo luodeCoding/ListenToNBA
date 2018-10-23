@@ -1,6 +1,6 @@
 # iOS ListenToNBA APP
 
-> 观看NBA直播并支持后台收听功能的APP
+> 观看NBA直播并支持后台收听功能的APP 
 
 <h1>结构</h1>
 
