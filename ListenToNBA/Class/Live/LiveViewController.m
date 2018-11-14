@@ -20,7 +20,6 @@
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @property (nonatomic, assign) CGPoint startPoint;
-
 @property (nonatomic, strong) UISlider *slider;     //进度条
 @property (nonatomic, strong) UILabel *currentTimeLab;      //当前播放时间
 @property (nonatomic, strong) UILabel *systemTimeLab;       //系统时间
@@ -75,8 +74,7 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
     
     //6.视频上的视图
-    [self makeUpMovieView];
-    
+    [self makeUpMovieView];    
     //7.监听loadedTime属性
     //如果有改变就更新值
     [_playerItem addObserver:self forKeyPath:@"loadedTime" options:NSKeyValueObservingOptionNew context:nil];

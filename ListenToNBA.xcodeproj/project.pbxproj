@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7C4AB910994D1AEF44723512 /* libPods-ListenToNBATests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A048946AAF958D12BF8E40B5 /* libPods-ListenToNBATests.a */; };
+		A92B5F0D219AA7BD00FBAA24 /* WidgetGameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B5F0B219AA7BD00FBAA24 /* WidgetGameTableViewCell.m */; };
+		A92B5F0E219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92B5F0C219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib */; };
+		A92B5F0F219AAD9D00FBAA24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DA98C02176CBAC00B27A6F /* Assets.xcassets */; };
+		A9363D5B219943DA006F9123 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9363D5A219943DA006F9123 /* NotificationCenter.framework */; };
+		A9363D5F219943DA006F9123 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9363D5E219943DA006F9123 /* TodayViewController.m */; };
+		A9363D62219943DA006F9123 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9363D60219943DA006F9123 /* MainInterface.storyboard */; };
+		A9363D66219943DA006F9123 /* LearnWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9363D59219943DA006F9123 /* LearnWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A96E1344217DBD2100B604DD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96E133E217DBD1F00B604DD /* BaseViewController.m */; };
 		A96E1345217DBD2100B604DD /* BaseNavgationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96E1342217DBD2100B604DD /* BaseNavgationViewController.m */; };
 		A96E1346217DBD2100B604DD /* UIViewController+PopBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A96E1343217DBD2100B604DD /* UIViewController+PopBlock.m */; };
@@ -46,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A9363D64219943DA006F9123 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9DA98AC2176CBAA00B27A6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9363D58219943DA006F9123;
+			remoteInfo = LearnWidget;
+		};
 		A9DA98CD2176CBAD00B27A6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A9DA98AC2176CBAA00B27A6F /* Project object */;
@@ -62,6 +76,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A9363D6A219943DA006F9123 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A9363D66219943DA006F9123 /* LearnWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0B841110570B5DEC7114630D /* Pods-ListenToNBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBA/Pods-ListenToNBA.release.xcconfig"; sourceTree = "<group>"; };
 		127E833513C995FE11038B46 /* Pods-ListenToNBAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBAUITests/Pods-ListenToNBAUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +99,17 @@
 		59CBAB5FF31108D3B53E3827 /* Pods-ListenToNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBA/Pods-ListenToNBA.debug.xcconfig"; sourceTree = "<group>"; };
 		6ED66EA4F66EFE964D2E5C68 /* Pods-ListenToNBATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBATests/Pods-ListenToNBATests.debug.xcconfig"; sourceTree = "<group>"; };
 		A048946AAF958D12BF8E40B5 /* libPods-ListenToNBATests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ListenToNBATests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A92B5F0A219AA7BD00FBAA24 /* WidgetGameTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetGameTableViewCell.h; sourceTree = "<group>"; };
+		A92B5F0B219AA7BD00FBAA24 /* WidgetGameTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetGameTableViewCell.m; sourceTree = "<group>"; };
+		A92B5F0C219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetGameTableViewCell.xib; sourceTree = "<group>"; };
+		A9363D59219943DA006F9123 /* LearnWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LearnWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9363D5A219943DA006F9123 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A9363D5D219943DA006F9123 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		A9363D5E219943DA006F9123 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		A9363D61219943DA006F9123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A9363D63219943DA006F9123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9363D6B21994952006F9123 /* ListenToNBA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ListenToNBA.entitlements; sourceTree = "<group>"; };
+		A9363D6C21995B3B006F9123 /* LearnWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnWidget.entitlements; sourceTree = "<group>"; };
 		A96E133E217DBD1F00B604DD /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		A96E133F217DBD2000B604DD /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		A96E1340217DBD2000B604DD /* UIViewController+PopBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PopBlock.h"; sourceTree = "<group>"; };
@@ -138,6 +177,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A9363D56219943DA006F9123 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9363D5B219943DA006F9123 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9DA98B12176CBAA00B27A6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +213,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9363D5C219943DA006F9123 /* LearnWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A9363D6C21995B3B006F9123 /* LearnWidget.entitlements */,
+				A9363D5D219943DA006F9123 /* TodayViewController.h */,
+				A9363D5E219943DA006F9123 /* TodayViewController.m */,
+				A9363D60219943DA006F9123 /* MainInterface.storyboard */,
+				A9363D63219943DA006F9123 /* Info.plist */,
+				A92B5F0A219AA7BD00FBAA24 /* WidgetGameTableViewCell.h */,
+				A92B5F0B219AA7BD00FBAA24 /* WidgetGameTableViewCell.m */,
+				A92B5F0C219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib */,
+			);
+			path = LearnWidget;
+			sourceTree = "<group>";
+		};
 		A96E133D217DBD1500B604DD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +268,7 @@
 				A9DA98B62176CBAA00B27A6F /* ListenToNBA */,
 				A9DA98CF2176CBAD00B27A6F /* ListenToNBATests */,
 				A9DA98DA2176CBAD00B27A6F /* ListenToNBAUITests */,
+				A9363D5C219943DA006F9123 /* LearnWidget */,
 				A9DA98B52176CBAA00B27A6F /* Products */,
 				A9DA98E92176D2F700B27A6F /* Frameworks */,
 				D3A1F5A3E7DF712BA83A9517 /* Pods */,
@@ -218,6 +281,7 @@
 				A9DA98B42176CBAA00B27A6F /* ListenToNBA.app */,
 				A9DA98CC2176CBAD00B27A6F /* ListenToNBATests.xctest */,
 				A9DA98D72176CBAD00B27A6F /* ListenToNBAUITests.xctest */,
+				A9363D59219943DA006F9123 /* LearnWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +289,7 @@
 		A9DA98B62176CBAA00B27A6F /* ListenToNBA */ = {
 			isa = PBXGroup;
 			children = (
+				A9363D6B21994952006F9123 /* ListenToNBA.entitlements */,
 				A96E133D217DBD1500B604DD /* Base */,
 				A9DA9935217D67A900B27A6F /* Vender */,
 				A9DA98FF2179BECF00B27A6F /* Category */,
@@ -266,6 +331,7 @@
 				404759699FC8ECA5E928C43D /* libPods-ListenToNBA.a */,
 				A048946AAF958D12BF8E40B5 /* libPods-ListenToNBATests.a */,
 				360B3F959F7A76969B6346B2 /* libPods-ListenToNBAUITests.a */,
+				A9363D5A219943DA006F9123 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,6 +449,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A9363D58219943DA006F9123 /* LearnWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9363D69219943DA006F9123 /* Build configuration list for PBXNativeTarget "LearnWidget" */;
+			buildPhases = (
+				A9363D55219943DA006F9123 /* Sources */,
+				A9363D56219943DA006F9123 /* Frameworks */,
+				A9363D57219943DA006F9123 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnWidget;
+			productName = LearnWidget;
+			productReference = A9363D59219943DA006F9123 /* LearnWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A9DA98B32176CBAA00B27A6F /* ListenToNBA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9DA98E02176CBAD00B27A6F /* Build configuration list for PBXNativeTarget "ListenToNBA" */;
@@ -393,10 +476,12 @@
 				A9DA98B22176CBAA00B27A6F /* Resources */,
 				F93CB53B817828CB4C8D408B /* [CP] Embed Pods Frameworks */,
 				B92AD070D3815E4DFECCA4C4 /* [CP] Copy Pods Resources */,
+				A9363D6A219943DA006F9123 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9363D65219943DA006F9123 /* PBXTargetDependency */,
 			);
 			name = ListenToNBA;
 			productName = ListenToNBA;
@@ -454,9 +539,20 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Roder;
 				TargetAttributes = {
+					A9363D58219943DA006F9123 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					A9DA98B32176CBAA00B27A6F = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -488,11 +584,22 @@
 				A9DA98B32176CBAA00B27A6F /* ListenToNBA */,
 				A9DA98CB2176CBAD00B27A6F /* ListenToNBATests */,
 				A9DA98D62176CBAD00B27A6F /* ListenToNBAUITests */,
+				A9363D58219943DA006F9123 /* LearnWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A9363D57219943DA006F9123 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9363D62219943DA006F9123 /* MainInterface.storyboard in Resources */,
+				A92B5F0F219AAD9D00FBAA24 /* Assets.xcassets in Resources */,
+				A92B5F0E219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9DA98B22176CBAA00B27A6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,6 +782,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A9363D55219943DA006F9123 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9363D5F219943DA006F9123 /* TodayViewController.m in Sources */,
+				A92B5F0D219AA7BD00FBAA24 /* WidgetGameTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9DA98B02176CBAA00B27A6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -725,6 +841,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A9363D65219943DA006F9123 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9363D58219943DA006F9123 /* LearnWidget */;
+			targetProxy = A9363D64219943DA006F9123 /* PBXContainerItemProxy */;
+		};
 		A9DA98CE2176CBAD00B27A6F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A9DA98B32176CBAA00B27A6F /* ListenToNBA */;
@@ -738,6 +859,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A9363D60219943DA006F9123 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9363D61219943DA006F9123 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		A9DA98BD2176CBAA00B27A6F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -757,6 +886,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A9363D67219943DA006F9123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LearnWidget/LearnWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72NERP758N;
+				INFOPLIST_FILE = LearnWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.roder.listennba.LearnWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9363D68219943DA006F9123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LearnWidget/LearnWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72NERP758N;
+				INFOPLIST_FILE = LearnWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.roder.listennba.LearnWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A9DA98DE2176CBAD00B27A6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -874,6 +1041,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_ENTITLEMENTS = ListenToNBA/ListenToNBA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72NERP758N;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -883,7 +1051,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Roder.ListenToNBA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roder.listennba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -896,6 +1064,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
+				CODE_SIGN_ENTITLEMENTS = ListenToNBA/ListenToNBA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72NERP758N;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -905,7 +1074,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Roder.ListenToNBA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roder.listennba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -992,6 +1161,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A9363D69219943DA006F9123 /* Build configuration list for PBXNativeTarget "LearnWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9363D67219943DA006F9123 /* Debug */,
+				A9363D68219943DA006F9123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A9DA98AF2176CBAA00B27A6F /* Build configuration list for PBXProject "ListenToNBA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

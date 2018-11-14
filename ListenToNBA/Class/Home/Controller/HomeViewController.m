@@ -11,8 +11,8 @@
 #import "LiveViewController.h"
 #import "WebViewController.h"
 #import "HW3DBannerView.h"
-#import <MediaPlayer/MediaPlayer.h>
 #import "BaseNavgationViewController.h"
+#import "GameModel.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (nonatomic,strong) HW3DBannerView *bannerView;
 @property (nonatomic,strong) NSArray *gameList;
+@property (nonatomic,strong) NSArray *juheGameList;
 @property (nonatomic,strong) NSMutableArray *newsUrlList;
 
 @end
@@ -28,7 +29,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -40,6 +40,7 @@
     [self initializeUI];
     [self requestLiveTeamList];
     [self requestBannerList];
+    [self requestGameNews];
 }
 
 #pragma mark - UI
@@ -80,16 +81,21 @@
     self.bannerView.placeHolderImage = [UIImage imageNamed:@"bannerBackImg"];
     weakSelf(weakSelf);
     self.bannerView.clickImageBlock = ^(NSInteger currentIndex) {
+    
+        
         WebViewController * webVC = [[WebViewController alloc]init];
         webVC.webUrl = weakSelf.newsUrlList[currentIndex];
-        BaseNavgationViewController * nav = [[BaseNavgationViewController alloc]initWithRootViewController:webVC];
-        [weakSelf presentViewController:nav animated:YES completion:nil];
+        if(![webVC.webUrl isEqualToString:@""]){
+            BaseNavgationViewController * nav = [[BaseNavgationViewController alloc]initWithRootViewController:webVC];
+            [weakSelf presentViewController:nav animated:YES completion:nil];
+        }
+        
     };
     [self.topView addSubview:self.bannerView];
 }
 
-
 //停止更新
+
 -(void)endRefresh{
     [self.tableView.mj_header endRefreshing];
     [self.tableView.mj_footer endRefreshing];
@@ -98,6 +104,12 @@
 
 #pragma mark - Event
 
+/**
+ 创建锁屏播放页面
+
+ @param teamName 球队名
+ @param commentatorName 解说员
+ */
 - (void)creatLockScreenFaceWithTeamName:(NSString *)teamName commentatorName:(NSString *)commentatorName {
     
     Class playingInfoCenter = NSClassFromString(@"MPNowPlayingInfoCenter");
@@ -148,6 +160,37 @@
     NSLog(@"%@",self.bannerView.data);
 }
 
+- (void)requestGameNews {
+//    [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/nba?key=537f7b3121a797c8d18f4c0523f3c124" parameters:nil success:^(id responseObject) {
+//        NSArray * array = responseObject[@"result"][@"list"];
+//        weakSelf.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:array[0]];
+//        NSLog(@"%@",weakSelf.juheGameList);
+//    } failure:^(NSError *error) {
+//        NSLog(@"fff");
+//    }];
+//
+    
+    [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/nba?key=537f7b3121a797c8d18f4c0523f3c124" parameters:nil success:^(id responseObject) {
+        
+        NSDictionary * dic = responseObject[@"result"][@"list"][0];
+//        self.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:dic[@"tr"]];
+        self.juheGameList = dic[@"tr"];
+        [self saveDataByNSUserDefaultsWithJuheGameList:_juheGameList];
+    } failure:^(NSError *error) {
+        NSLog(@"fff");
+    }];
+    
+    
+}
+
+- (void)saveDataByNSUserDefaultsWithJuheGameList:(NSArray *)juheGameList{
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.listennba.appGroup"];
+//    [userDefault setValue:@"你好通知栏扩展" forKey:@"haha"];
+    [userDefault setValue:juheGameList forKey:@"GameList"];
+    [userDefault synchronize];
+    NSLog(@"fff");
+}
+
 #pragma mark - Delegate
 
 //tableviewDelegate
@@ -179,8 +222,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AVObject * model = self.gameList[indexPath.row];
-    
-    
     switch ([model[@"status"] integerValue]) {
         case 0:
         [MBProgressHUD alertHUDShowIn:self.view message:@"比赛暂未开始" hidenAfter:0.8 mode:MBProgressHUDModeText];
@@ -225,7 +266,13 @@
     return _newsUrlList;
 }
 
-
+- (NSArray *)juheGameList {
+    if (!_juheGameList) {
+        NSArray * array = [NSArray array];
+        _juheGameList = array;
+    }
+    return _juheGameList;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

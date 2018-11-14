@@ -8,6 +8,9 @@
 
 #import "GameModel.h"
 
-@implementation GameModel
 
+
+
+@implementation GameModel
+MJExtensionCodingImplementation
 @end
