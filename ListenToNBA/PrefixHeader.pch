@@ -29,6 +29,7 @@
 #import <YYCache.h>
 #import <PPNetworkHelper.h>
 #import <AVQuery.h>
+#import <CYLTabBarController.h>
 
 #endif /* PrefixHeader_pch */
 

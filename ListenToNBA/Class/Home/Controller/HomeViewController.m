@@ -161,25 +161,20 @@
 }
 
 - (void)requestGameNews {
-//    [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/nba?key=537f7b3121a797c8d18f4c0523f3c124" parameters:nil success:^(id responseObject) {
-//        NSArray * array = responseObject[@"result"][@"list"];
-//        weakSelf.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:array[0]];
-//        NSLog(@"%@",weakSelf.juheGameList);
-//    } failure:^(NSError *error) {
-//        NSLog(@"fff");
-//    }];
-//
-    
+    weakSelf(weakSelf);
     [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/nba?key=537f7b3121a797c8d18f4c0523f3c124" parameters:nil success:^(id responseObject) {
         
-        NSDictionary * dic = responseObject[@"result"][@"list"][0];
-//        self.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:dic[@"tr"]];
-        self.juheGameList = dic[@"tr"];
-        [self saveDataByNSUserDefaultsWithJuheGameList:_juheGameList];
+        if (responseObject[@"error_code"] == 0) {
+            NSDictionary * dic = responseObject[@"result"][@"list"][0];
+            weakSelf.juheGameList = dic[@"tr"];
+            [weakSelf saveDataByNSUserDefaultsWithJuheGameList:weakSelf.juheGameList];
+        }else {
+            [MBProgressHUD alertHUDShowIn:self.view message:responseObject[@"reason"] hidenAfter:1 mode:MBProgressHUDModeText];
+        }
+       
     } failure:^(NSError *error) {
-        NSLog(@"fff");
+        NSLog(@"%@",error);
     }];
-    
     
 }
 

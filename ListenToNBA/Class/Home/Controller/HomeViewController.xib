@@ -39,15 +39,15 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="30Y-3p-zzP">
-                    <rect key="frame" x="0.0" y="195" width="375" height="472"/>
+                    <rect key="frame" x="0.0" y="195" width="375" height="432"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="30Y-3p-zzP" firstAttribute="top" secondItem="0e8-HO-5Wi" secondAttribute="bottom" constant="-65" id="9ar-Uv-8Pr"/>
                 <constraint firstItem="0e8-HO-5Wi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FQX-vm-6TT"/>
-                <constraint firstAttribute="bottom" secondItem="30Y-3p-zzP" secondAttribute="bottom" id="S03-O0-6NJ"/>
+                <constraint firstAttribute="bottom" secondItem="30Y-3p-zzP" secondAttribute="bottom" constant="40" id="S03-O0-6NJ"/>
                 <constraint firstAttribute="trailing" secondItem="30Y-3p-zzP" secondAttribute="trailing" id="chF-TS-K9C"/>
                 <constraint firstAttribute="trailing" secondItem="0e8-HO-5Wi" secondAttribute="trailing" id="jgI-Ye-Tdx"/>
                 <constraint firstItem="0e8-HO-5Wi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o3A-9w-XRr"/>

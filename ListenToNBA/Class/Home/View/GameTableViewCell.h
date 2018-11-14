@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GameModel.h"
 @interface GameTableViewCell : UITableViewCell
 
 - (void)initData:(AVObject *)game;
+- (void)initDataWithGameModel:(GameModel *)game;
 @end

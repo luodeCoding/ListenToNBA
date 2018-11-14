@@ -55,7 +55,7 @@
     return currentDateStr;
 }
 
-#pragma mark - 根据date转换成string
+#pragma mark - 根据Date转换成string
 + (NSString *)TransformDateStringWithFormat:(NSString *)formatterStr getDate:(NSDate *)date {
     
     // 用于格式化NSDate对象
@@ -66,6 +66,15 @@
     NSString *currentDateStr = [formatter stringFromDate:date];
     // 输出currentDateStr
     return currentDateStr;
+}
+#pragma mark - 根据dateString转换成Date
++ (NSDate *)TransformDateWithFormat:(NSString *)formatterStr getDateString:(NSString *)dateString {
+    
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc]init];//实例化一个NSDateFormatter对象
+    [dateFormat setDateFormat:formatterStr];//设定时间格式,要注意跟下面的dateString匹配，否则日起将无效
+    NSDate*date =[dateFormat dateFromString:dateString];
+    
+    return date;
 }
 
 // 获取date的下个月日期

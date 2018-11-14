@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7C4AB910994D1AEF44723512 /* libPods-ListenToNBATests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A048946AAF958D12BF8E40B5 /* libPods-ListenToNBATests.a */; };
+		A9037506219BB6780042A370 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9037505219BB6780042A370 /* MainTabBarViewController.m */; };
+		A903750B219BB71D0042A370 /* TeamVersusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9037509219BB71D0042A370 /* TeamVersusViewController.m */; };
+		A903750C219BB71D0042A370 /* TeamVersusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A903750A219BB71D0042A370 /* TeamVersusViewController.xib */; };
+		A9037513219BBDA40042A370 /* TeamVersusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9037511219BBDA40042A370 /* TeamVersusCollectionViewCell.m */; };
+		A9037514219BBDA40042A370 /* TeamVersusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9037512219BBDA40042A370 /* TeamVersusCollectionViewCell.xib */; };
+		A9037518219BCD970042A370 /* TeamVersusGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9037516219BCD970042A370 /* TeamVersusGameListViewController.m */; };
+		A9037519219BCD970042A370 /* TeamVersusGameListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9037517219BCD970042A370 /* TeamVersusGameListViewController.xib */; };
 		A92B5F0D219AA7BD00FBAA24 /* WidgetGameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B5F0B219AA7BD00FBAA24 /* WidgetGameTableViewCell.m */; };
 		A92B5F0E219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92B5F0C219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib */; };
 		A92B5F0F219AAD9D00FBAA24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DA98C02176CBAC00B27A6F /* Assets.xcassets */; };
@@ -99,6 +106,17 @@
 		59CBAB5FF31108D3B53E3827 /* Pods-ListenToNBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBA/Pods-ListenToNBA.debug.xcconfig"; sourceTree = "<group>"; };
 		6ED66EA4F66EFE964D2E5C68 /* Pods-ListenToNBATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListenToNBATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListenToNBATests/Pods-ListenToNBATests.debug.xcconfig"; sourceTree = "<group>"; };
 		A048946AAF958D12BF8E40B5 /* libPods-ListenToNBATests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ListenToNBATests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9037504219BB6780042A370 /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		A9037505219BB6780042A370 /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		A9037508219BB71D0042A370 /* TeamVersusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamVersusViewController.h; sourceTree = "<group>"; };
+		A9037509219BB71D0042A370 /* TeamVersusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamVersusViewController.m; sourceTree = "<group>"; };
+		A903750A219BB71D0042A370 /* TeamVersusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamVersusViewController.xib; sourceTree = "<group>"; };
+		A9037510219BBDA40042A370 /* TeamVersusCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamVersusCollectionViewCell.h; sourceTree = "<group>"; };
+		A9037511219BBDA40042A370 /* TeamVersusCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamVersusCollectionViewCell.m; sourceTree = "<group>"; };
+		A9037512219BBDA40042A370 /* TeamVersusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamVersusCollectionViewCell.xib; sourceTree = "<group>"; };
+		A9037515219BCD970042A370 /* TeamVersusGameListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamVersusGameListViewController.h; sourceTree = "<group>"; };
+		A9037516219BCD970042A370 /* TeamVersusGameListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamVersusGameListViewController.m; sourceTree = "<group>"; };
+		A9037517219BCD970042A370 /* TeamVersusGameListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamVersusGameListViewController.xib; sourceTree = "<group>"; };
 		A92B5F0A219AA7BD00FBAA24 /* WidgetGameTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WidgetGameTableViewCell.h; sourceTree = "<group>"; };
 		A92B5F0B219AA7BD00FBAA24 /* WidgetGameTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WidgetGameTableViewCell.m; sourceTree = "<group>"; };
 		A92B5F0C219AA7BD00FBAA24 /* WidgetGameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetGameTableViewCell.xib; sourceTree = "<group>"; };
@@ -213,6 +231,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9037507219BB7070042A370 /* TeamVersus */ = {
+			isa = PBXGroup;
+			children = (
+				A903750D219BBD4B0042A370 /* Controller */,
+				A903750F219BBD6A0042A370 /* Model */,
+				A903750E219BBD5C0042A370 /* View */,
+			);
+			path = TeamVersus;
+			sourceTree = "<group>";
+		};
+		A903750D219BBD4B0042A370 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9037508219BB71D0042A370 /* TeamVersusViewController.h */,
+				A9037509219BB71D0042A370 /* TeamVersusViewController.m */,
+				A903750A219BB71D0042A370 /* TeamVersusViewController.xib */,
+				A9037515219BCD970042A370 /* TeamVersusGameListViewController.h */,
+				A9037516219BCD970042A370 /* TeamVersusGameListViewController.m */,
+				A9037517219BCD970042A370 /* TeamVersusGameListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A903750E219BBD5C0042A370 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9037510219BBDA40042A370 /* TeamVersusCollectionViewCell.h */,
+				A9037511219BBDA40042A370 /* TeamVersusCollectionViewCell.m */,
+				A9037512219BBDA40042A370 /* TeamVersusCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A903750F219BBD6A0042A370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A9363D5C219943DA006F9123 /* LearnWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +295,8 @@
 				A96E133E217DBD1F00B604DD /* BaseViewController.m */,
 				A96E1340217DBD2000B604DD /* UIViewController+PopBlock.h */,
 				A96E1343217DBD2100B604DD /* UIViewController+PopBlock.m */,
+				A9037504219BB6780042A370 /* MainTabBarViewController.h */,
+				A9037505219BB6780042A370 /* MainTabBarViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -399,6 +459,7 @@
 		A9DA99212179BFA400B27A6F /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A9037507219BB7070042A370 /* TeamVersus */,
 				A96E1347217DC38100B604DD /* Web */,
 				A9DA99222179BFB200B27A6F /* Home */,
 				A9DA992E2179D3C900B27A6F /* Live */,
@@ -607,8 +668,11 @@
 				A9DA98C42176CBAC00B27A6F /* LaunchScreen.storyboard in Resources */,
 				A9DA98C12176CBAC00B27A6F /* Assets.xcassets in Resources */,
 				A9DA99272179BFD300B27A6F /* HomeViewController.xib in Resources */,
+				A903750C219BB71D0042A370 /* TeamVersusViewController.xib in Resources */,
 				A96E134F217DC3B600B604DD /* WebViewController.xib in Resources */,
 				A9DA98BF2176CBAA00B27A6F /* Main.storyboard in Resources */,
+				A9037514219BBDA40042A370 /* TeamVersusCollectionViewCell.xib in Resources */,
+				A9037519219BCD970042A370 /* TeamVersusGameListViewController.xib in Resources */,
 				A9DA98FD2179B5B300B27A6F /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,10 +859,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9037513219BBDA40042A370 /* TeamVersusCollectionViewCell.m in Sources */,
 				A9DA991B2179BECF00B27A6F /* UIBarButtonItem+Extension.m in Sources */,
 				A9DA99142179BECF00B27A6F /* CommonUtil.m in Sources */,
 				A9DA992A2179C31800B27A6F /* BaseModel.m in Sources */,
 				A9DA991C2179BECF00B27A6F /* UIView+Extension.m in Sources */,
+				A9037518219BCD970042A370 /* TeamVersusGameListViewController.m in Sources */,
 				A9DA991A2179BECF00B27A6F /* UIButton+Badge.m in Sources */,
 				A9DA992D2179C33300B27A6F /* GameModel.m in Sources */,
 				A96E1346217DBD2100B604DD /* UIViewController+PopBlock.m in Sources */,
@@ -807,8 +873,10 @@
 				A9DA99172179BECF00B27A6F /* UIImage+Util.m in Sources */,
 				A9DA99162179BECF00B27A6F /* NSString+Util.m in Sources */,
 				A96E135A217E005100B604DD /* HW3DBannerView.m in Sources */,
+				A9037506219BB6780042A370 /* MainTabBarViewController.m in Sources */,
 				A9DA99262179BFD300B27A6F /* HomeViewController.m in Sources */,
 				A9DA99312179D51800B27A6F /* LiveViewController.m in Sources */,
+				A903750B219BB71D0042A370 /* TeamVersusViewController.m in Sources */,
 				A9DA99152179BECF00B27A6F /* UIImage+Extension.m in Sources */,
 				A96E1345217DBD2100B604DD /* BaseNavgationViewController.m in Sources */,
 				A9DA98B92176CBAA00B27A6F /* AppDelegate.m in Sources */,

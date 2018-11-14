@@ -69,5 +69,6 @@
 @property (nonatomic,copy) NSString *player1;
 @property (nonatomic,copy) NSString *player2;
 @property (nonatomic,copy) NSString *score;
+@property (nonatomic,copy) NSString *status;
 
 @end

@@ -12,6 +12,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "HomeViewController.h"
 #import "BaseNavgationViewController.h"
+#import "MainTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -26,8 +27,10 @@
     [self configLeanCloudKey];
     [self supportBackGroundPlayAudio];
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
-    HomeViewController * home = [[HomeViewController alloc]init];
-    self.window.rootViewController = home;
+    MainTabBarViewController * main = [[MainTabBarViewController alloc]init];
+    
+//    HomeViewController * home = [[HomeViewController alloc]init];
+    self.window.rootViewController = main;
     [self.window makeKeyAndVisible];
     return YES;
 }
