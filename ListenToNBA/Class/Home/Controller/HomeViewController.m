@@ -63,6 +63,7 @@
     MJRefreshNormalHeader * header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf requestLiveTeamList];
         [weakSelf requestBannerList];
+        [weakSelf requestGameNews];
     }];
     header.stateLabel.textColor = kTintColor;
     header.lastUpdatedTimeLabel.textColor = kTintColor;
@@ -143,8 +144,6 @@
     AVQuery *query = [AVQuery queryWithClassName:@"Game"];
     self.gameList = nil;
     self.gameList = [query findObjects];
-    [self endRefresh];
-    [self.tableView reloadData];
 }
 
 - (void)requestBannerList {
@@ -162,18 +161,24 @@
 
 - (void)requestGameNews {
     weakSelf(weakSelf);
+    [self showHUDToViewMessage:nil];
     [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/nba?key=537f7b3121a797c8d18f4c0523f3c124" parameters:nil success:^(id responseObject) {
-        
-        if (responseObject[@"error_code"] == 0) {
+        [weakSelf removeHUD];
+        if ([[NSString stringWithFormat:@"%@",responseObject[@"error_code"]] isEqualToString:@"0"]) {
             NSDictionary * dic = responseObject[@"result"][@"list"][0];
-            weakSelf.juheGameList = dic[@"tr"];
-            [weakSelf saveDataByNSUserDefaultsWithJuheGameList:weakSelf.juheGameList];
+            weakSelf.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:dic[@"tr"]];;
+            [weakSelf saveDataByNSUserDefaultsWithJuheGameList:dic[@"tr"]];
+            [weakSelf endRefresh];
+            [weakSelf.tableView reloadData];
         }else {
             [MBProgressHUD alertHUDShowIn:self.view message:responseObject[@"reason"] hidenAfter:1 mode:MBProgressHUDModeText];
+            [weakSelf endRefresh];
         }
        
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+        [weakSelf removeHUD];
+        [weakSelf endRefresh];
     }];
     
 }
@@ -183,7 +188,7 @@
 //    [userDefault setValue:@"你好通知栏扩展" forKey:@"haha"];
     [userDefault setValue:juheGameList forKey:@"GameList"];
     [userDefault synchronize];
-    NSLog(@"fff");
+    NSLog(@"存储成功");
 }
 
 #pragma mark - Delegate
@@ -195,8 +200,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.gameList.count;
+
+    return self.juheGameList.count;
 }
 
 
@@ -204,8 +209,14 @@
     
     GameTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    AVObject * model = self.gameList[indexPath.row];
-    [cell initData: model];
+    GameModel * model = self.juheGameList[indexPath.row];
+    for (AVObject * avModel in self.gameList) {
+        if ([avModel[@"awayTeamName"] isEqualToString:model.player1]) {
+            model.liveUrl = avModel[@"liveUrl"];
+            model.commentator = avModel[@"commentator"];
+        }
+    }
+    [cell initHomeDataWithGameModel:model];
     return cell;
 }
 
@@ -216,22 +227,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AVObject * model = self.gameList[indexPath.row];
-    switch ([model[@"status"] integerValue]) {
+    
+    GameModel * model = self.juheGameList[indexPath.row];
+    switch ([model.status integerValue]) {
         case 0:
         [MBProgressHUD alertHUDShowIn:self.view message:@"比赛暂未开始" hidenAfter:0.8 mode:MBProgressHUDModeText];
             break;
         case 1:{
-            if (![model[@"liveUrl"] isEqualToString:@"no"]){
+            if (![model.liveUrl isEqualToString:@"no"]){
                 LiveViewController * live = [[LiveViewController alloc]init];
-                live.liveTitle = [NSString stringWithFormat:@"%@ VS %@",model[@"awayTeamName"],model[@"homeTeamName"]];
-                live.liveUrl = model[@"liveUrl"];
-                [self creatLockScreenFaceWithTeamName:live.liveTitle commentatorName:model[@"commentator"]];
+                live.liveTitle = [NSString stringWithFormat:@"%@ VS %@",model.player1,model.player2];
+                live.liveUrl = model.liveUrl;
+                [self creatLockScreenFaceWithTeamName:live.liveTitle commentatorName:model.commentator];
                 [self presentViewController:live animated:YES completion:nil];
             }else {
-                 [MBProgressHUD alertHUDShowIn:self.view message:@"比赛暂未开始" hidenAfter:0.8 mode:MBProgressHUDModeText];
+                 [MBProgressHUD alertHUDShowIn:self.view message:@"暂无比赛直播源" hidenAfter:0.8 mode:MBProgressHUDModeText];
             }
-           
+
         }
             break;
         case 2:
@@ -240,6 +252,8 @@
         default:
             break;
     }
+    
+    
 }
 
 

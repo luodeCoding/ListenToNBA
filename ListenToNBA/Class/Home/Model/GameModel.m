@@ -13,4 +13,19 @@
 
 @implementation GameModel
 MJExtensionCodingImplementation
+
+- (NSString *)commentator {
+    if (_commentator) {
+        return _commentator;
+    }
+    return @"未知";
+}
+
+- (NSString *)liveUrl {
+    if (_liveUrl) {
+        return _liveUrl;
+    }
+    return @"no";
+}
+
 @end

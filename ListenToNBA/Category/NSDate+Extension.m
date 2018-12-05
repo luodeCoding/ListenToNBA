@@ -116,11 +116,11 @@
 }
 
 //比较时间大小
-+(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay
++(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay format:(NSString *)format
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setDateFormat:format];
     
     NSString *oneDayStr = [dateFormatter stringFromDate:oneDay];
     
@@ -134,16 +134,19 @@
     
     if (result == NSOrderedDescending) {
         //NSLog(@"oneDay比 anotherDay时间晚");
+//        oneDay 大
         return 1;
     }
     else if (result == NSOrderedAscending){
         //NSLog(@"oneDay比 anotherDay时间早");
+//        anotherDay 大
         return -1;
     }
     //NSLog(@"两者时间是同一个时间");
     return 0;
     
 }
+
 
 //计算天数
 + (NSInteger)numberOfDaysWithFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate{

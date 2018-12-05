@@ -32,7 +32,7 @@
 
 + (NSString *)getWeekDayWithDate:(NSDate *)date;
 
-+(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay;
++(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay format:(NSString *)format;
 
 //前一天
 + (NSDate *)lastDay;

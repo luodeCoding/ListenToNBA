@@ -10,6 +10,6 @@
 #import "GameModel.h"
 @interface GameTableViewCell : UITableViewCell
 
-- (void)initData:(AVObject *)game;
+- (void)initHomeDataWithGameModel:(GameModel *)game;
 - (void)initDataWithGameModel:(GameModel *)game;
 @end

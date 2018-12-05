@@ -52,13 +52,14 @@
     [self showHUDToViewMessage:nil];
     [PPNetworkHelper GET:@"http://op.juhe.cn/onebox/basketball/team?key=537f7b3121a797c8d18f4c0523f3c124" parameters:@{@"team":self.teamName} success:^(id responseObject) {
         [weakSelf removeHUD];
-        if (responseObject[@"error_code"] == 0) {
+        if ([[NSString stringWithFormat:@"%@",responseObject[@"error_code"]] isEqualToString:@"0"]) {
             weakSelf.juheGameList = [GameModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"][@"list"]];
             [weakSelf.tableView reloadData];
         }else {
             [MBProgressHUD alertHUDShowIn:self.view message:responseObject[@"reason"] hidenAfter:1 mode:MBProgressHUDModeText];
         }
     } failure:^(NSError *error) {
+        [weakSelf removeHUD];
         NSLog(@"fff");
     }];
     

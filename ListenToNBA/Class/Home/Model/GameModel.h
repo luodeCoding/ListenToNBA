@@ -70,5 +70,8 @@
 @property (nonatomic,copy) NSString *player2;
 @property (nonatomic,copy) NSString *score;
 @property (nonatomic,copy) NSString *status;
+@property (nonatomic,copy) NSString *liveUrl;
+@property (nonatomic,copy) NSString *commentator;
+
 
 @end
